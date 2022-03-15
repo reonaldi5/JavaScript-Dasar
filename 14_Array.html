@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+</head>
+<body>
+
+<script>
+
+    // Array di JS sifatnya dinamis, artinya datanya bisa bertambah dengan sendirinya saat
+    // kita memasukkan data ke dalam array
+
+    let arrayKosong = [];
+
+    let arrayNama = ["Doni", "Budi", "Wahyu"]; // tidak hanya string, number, dan boolean
+
+    // untuk menambah array gunakan method push, sebelum method push awali dengan variable array nya
+
+    const names = [];
+    names.push("Rizky");
+    names.push("Dani", "Budi");
+
+    console.table(names);
+
+
+    /*
+        OPERASI DI ARRAY
+
+        - array.push(value) -> menambah data ke dalam array
+        - array.length -> mendapatkan panjang array
+        - array[index] -> mendapatkan data di posisi index
+        - array[index] = value -> mengubah data di posisi index
+        - delete array[index] -> Menghapus data di posisi index, namun index tidak bergeser
+    */
+
+    console.info(names[0]); // untuk mengakses data array menggunakan index di array
+    console.info(names[1]);
+    console.info(names[2]);
+
+    names[0] = "Joko";
+
+    console.table(names);
+    console.info(names.length);
+
+    delete names[3]; // walaupun udah di delete, jika index ke 3 ingin diubah lagi itu bisa, 
+    //jadi tidak benar benar dihapus total, index nya hanya di sembuyikan, dan datanya di hapus
+
+    console.table(names);
+
+
+    /*
+        PERLU DIINGAT
+
+        - Data di dalam array tidak ada batasannya harus data apa
+        - jadi kita bisa memasukkan data apapun ke dalam array
+        - bahkan kita memasukkan array ke dalam array jika kita mau
+    */
+
+
+
+</script>
+    
+</body>
+</html>

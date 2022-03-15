@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR OF</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+            FOR OF
+
+            - Jika For In digunakan untuk melakukan iterasi property atau index, berbeda dengan For Of,
+                ini digunakan untuk melakukan iterasi terhadap isi value dari iterable object,
+                seperti Array, String dan lain-lain
+            - For Of tidak bisa digunakan untuk melakukan iterasi data di object, karena object bukanlah iterable
+        */
+
+        const names = ["Doni", "Setia", "Budi"];
+
+        for (const name of names) {
+            document.writeln(`<p> ${name} </p>`);
+        }
+
+
+        const fullName = "Doni SetiaBudi";
+
+        for (const char of fullName) {
+            document.writeln(`<p> ${char} </p>`);
+        }
+
+        // const person = {
+        //     firstName: "Doni",
+        //     lastName: "Saputra"
+        // }
+
+        // for (const orang of person) {
+        //     document.writeln(`<p> ${orang} </p>`);
+        // }
+
+        // FOR OF DIATAS ITU ERROR, KARENA OBJECT BUKAN ITERABLE(AKAN DIBAHAS DI OOP)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR LOOP</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+            For adalah salah satu kunci yang bisa digunakan untuk melakukan perulangan
+            blok kode yang terdapat di dalam for akan selalu diulangi selama kondisi terpenuhi
+
+            SINTAKS FOR LOOP
+
+            for(init statement; kondisi; post statement) {
+                //blok penrulangan
+            }
+
+            - Init statement akan dieksekusi hanya sekali di awal sebelum perulangan
+            - Kondisi akan dilakukan pengecekan dalam setiap perulangan, jika true perulangan akan dilakukan,
+                jika false perulangan akan berhenti
+            - Post statement akan dieksekusi setiap akhir perulangan
+            - Init statement, Kondisi, dan post statement tidak wajib diisi, jika kondisi tidak diisi,
+                berarti kondisi selalu bernilai true
+        */
+
+        // for(;;){
+            // karena tidak diisi kondisi nya, maka for akan melakukan perulangan terus menerus,
+            // karena kondisi nya selalu true
+            // alert("For Loop");
+        // }
+
+        let counter = 1;
+
+        for(;counter <= 10;){
+            document.writeln(`<p> Perulangan ke - ${counter} </p>`);
+            counter++;
+        }
+
+
+        for (a = 1; a <= 5;){
+            document.writeln(`<p> Perulangan ke - ${a} </p>`);
+            a++;
+        }
+
+        for (b = 1; b <= 5; b++){
+            document.writeln(`<p> Perulangan ke - ${b} </p>`);
+        }
+
+    </script>
+    
+</body>
+</html>

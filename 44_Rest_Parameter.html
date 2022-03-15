@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST PARAMETER</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+            REST PARAMATER
+
+            - Rest Parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyaknya pada satu parameter,
+                dan secara otomatis akan dikonversi menjadi Array
+            - Untuk membuat rest parameter, ada ketentuannya
+            - Rest parameter hanya boleh berada di posisi paling akhir, tidak boleh di depan atau di tengah,
+                kecuali memang cuma ada 1 parameter
+            - Di bahasa pemrograman lain, ada juga yang bilang ini adalah variable argument
+        */
+
+        function sum(name, ...data) // ...data menjadi rest parameter(diconvert jd array)
+        {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            console.info(`Total ${name} is ${total}`);
+        }
+
+        sum("orange", 2, 5, 6, 7, 5);
+        sum("Apple", 4, 5, 6, 8, 2);
+        sum("Banana", 8, 7, 5, 4, 3);
+
+
+
+        /*
+            SPREAD SYNTAX
+
+            - Kadang kita terlanjur memiliki data berupa Array
+            - kita bisa mengubah data array menjadi rest paramater
+            - jadi jika kita mempunyai data array, maka bisa dipakai ke dalam rest parameter
+            - Tapi untungnya kita juga bisa mengirim Array ke Rest Parameter
+            - Kita bisa gunakan ...(titik tigas kali) diikuti dengan array nya ketika manggil function
+            - Fitur ini dinamakan Spread Syntax
+        */
+
+        const values = [10,5,6,7,3];
+        sum("test", ...values);
+
+
+        /*
+            ARGUMENTS OBJECT
+
+            - Sebelum ada fitur rest parameter, di JS sudah ada fitur yang bernama arguments object
+            - Ini adalah fitur dimana kita bisa mengambil semua parameter dalam bentuk array dengan menggunakan object bernama arguments
+            - arguments secara otomatis bisa digunakan di function
+            - Namun perlu diingat, bahwa untuk JS saat ini, lebih baik disarankan menggunakan rest parameter dibanding arguments object
+        */
+
+        function oldSum() {
+            let total = 0
+            for (const item of arguments) {
+                total += item;
+            }
+
+            console.info(`Total is ${total}`);
+        }
+
+        oldSum(1,3,5,5,3,9,4);
+
+    </script>
+    
+</body>
+</html>

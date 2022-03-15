@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTION DI DALAM FUNCTION</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+            FUNCTION DI DALAM FUNCTION (NESTED FUNCTION)
+
+            - Tidak ada batasan dimana kita bisa membuat function
+            - Termasuk jika kita ingin membuat function di dalam sebuah function, kita bisa melakukannya
+            - Function yang terdapat di dalam, kita sebut inner function
+            - Inner function hanya bisa diakses di tempat kita membuat function nya,
+                tidak bisa diakses dari luar function
+        */
+
+        function outer() {
+
+            function inner() {
+                console.info("Inner");
+            }
+
+            inner();
+            inner();
+            // inner function hanya bisa diakses di dalam outer function,
+            // tidak bisa diakses diluar outer function
+        }
+
+        outer();
+
+        // inner(); // Error can not acces inner function
+
+    </script>
+    
+</body>
+</html>

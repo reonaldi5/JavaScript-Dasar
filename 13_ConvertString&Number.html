@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONVERSI STRING DAN NUMBER</title>
+</head>
+<body>
+
+<script>
+
+    /*
+        KONVERSI STRING DAN NUMBER
+
+        - Saat membuat aplikasi, kadang kita input dari pengguna selalu dalam bentuk String
+        - Sedangkan kita ingin mengelola datanya dalam bentuk number
+        - Maka sangat disarankan untuk melakukan konversi tipe data
+    */
+
+    // TANPA KONVERSI
+
+    const value1 = "1";
+    const value2 = 1;
+    const sum = value1 + value2;// jadi ini string ditambah string, hasilnya akan 11
+
+    document.writeln(`<p>${sum}</p>`);
+
+
+    /*
+        MELAKUKAN KONVERSI STRING DAN NUMBER
+
+        - parseInt(string) -> konversi dari string ke number(bilangan bulat)
+        - parseFloat(string) -> konversi dari string ke number(bilangan pecahan)
+        - Number(string) -> konversi dari string ke number(bilangan bulat atau pecahan)
+        - number.toString() -> konversi dari number ke string
+    */
+
+    const value3 = parseInt("1");
+    const value4 = 1;
+    const sum = value3 + value4;// jadi ini string ditambah string, hasilnya akan 11
+
+    document.writeln(`<p>${sum}</p>`);
+
+    document.writeln(`<p>${parseInt("1.1")}</p>`); //ini akan menghasilkan 1, karena akan dikonversi ke bilangan bulat, pecahan akan dihiraukan 
+    document.writeln(`<p>${parseFloat("1.1")}</p>`); 
+    document.writeln(`<p>${Number("1.1")}</p>`); // ini akan fleksibel
+
+    const a = 1;
+    const b = 1;
+    const total = a.toString() + b.toString();
+
+    document.writeln(`<p>${total}</p>`);
+
+
+
+
+    /*
+        NaN(Not a Number)
+
+        - Bagaimana jika ternyata data string yang kita coba konversi ke number bukanlah data yang valid?
+        - Jika data string yang kita coba lakukan konversi bukanlah data valid,
+        maka hasil dari konversi tersebut adalah NaN (Not a Number)
+
+        - NaN adalah number spesial yang menyebutkan bahwa ini bukanlah number
+        - Jika NaN dioperasikan dengan dat number lainnya, maka hasilnya akan menjadi NaN lagi
+    */
+
+
+    // parseint dan parsefloat akan mentolelir kesalahan kalau kesalahan nya ada dibelakang
+    document.writeln(`<p>${parseInt("salah")}</p>`); // ini akan menghasilkan NaN
+    document.writeln(`<p>${parseFloat("1.1text")}</p>`); // ini hasilnya 1.1, 
+    //jika depannya angka dan belakangnya teks, maka akan di ignore yang belakangnya yaitu teks
+
+
+    // Number() tidak akan mentolelir kesalahan pada data
+    document.writeln(`<p>${Number("1.1ups")}</p>`); // NaN
+    document.writeln(`<p>${Number("1x")}</p>`); // NaN
+    document.writeln(`<p>${Number("bukan number")}</p>`); // NaN
+
+
+    // OPERASI PADA NaN
+
+    const nilai1 = Number("salah"); // NaN
+    const nilai2 = 100;
+    const hasil = nilai1 + nilai2; // NaN
+
+    document.writeln(`<p> ${hasil} </p>`); // NaN
+
+
+    /*
+        isNaN() Function
+
+        - Kadang kita ingin mengecek apakah sebuah number itu NaN atau bukan
+        - Untuk melakukan pengecekan tersebut, kita bisa menggunakan function isNaN(number)
+        - Hasilnya adalah berupa boolean
+    */
+
+    document.writeln(`<p> ${isNaN(nilai1)} </p>`);
+    document.writeln(`<p> ${isNaN(100)} </p>`);
+    document.writeln(`<p> ${isNaN(NaN)} </p>`);
+
+
+</script>
+    
+</body>
+</html>

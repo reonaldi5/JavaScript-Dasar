@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSOLE</title>
+</head>
+<body>
+
+<script>
+
+    /*
+        CONSOLE
+
+        - JS memiliki fitur untuk melakukan logging bernama Console
+        - Logging adalah mekanisme yang biasa dilakukan programmer untuk menampilkan informasi dari aplikasi
+        yang sedang berjalan, tanpa harus mengganggu alur kerja aplikasi dan juga interaksi user
+
+        - butuh untuk debugging, debugging adalah mencari bug
+
+        - Untuk melakukan ini, kita bisa menggunakan fitur Console di JS
+        - Untuk menggunakan Console, kita cukup gunakan perintah console di kode JS
+    */
+
+    /*
+        CONSOLE METHOD
+
+        - console.info(..) -> Memberitahu informasi
+        - console.warn(..) -> memberitahu informasi peringatan
+        - console.error(..) -> Memberitahu informasi error
+        - console.table(..) -> Memberitahu informasi dalam bentuk table
+    */
+    console.debug("debug"); // ini jarang digunakan, jika ingin informasi sekecil mungkin
+    //default nya debug tidak dikeluarkan, akan dikeluarkan jika default level ditambahkan ke verbose di inspect elemen
+    // mengapa tidak dikeluarkan, agar tidak mengganggu performa JS kita,karna terlalu banyak di console, maka akan semakin lama aplikasi kita
+
+    console.info("Hello World"); // ini akan menhasilkan di inspect elemen chrome, yaitu di console
+    // seperti ingin menampilkan informasi alur kerja program di file JS
+    // console.log("Hello World"); ini sama seperti console.info
+
+
+    console.warn("ini peringatan");
+
+    console.error("ini error");
+
+</script>
+    
+</body>
+</html>

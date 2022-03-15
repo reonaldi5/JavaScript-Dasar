@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIPE DATA STRING</title>
+</head>
+<body>
+    
+<script>
+    /*
+        TIPE DATA STRING
+
+        - Tipe data yang berisikan kumpulan kosong atau lebih karakter
+        - Di JS, untuk membuat data dengan tipe string, kita perlu menggunakan petik dua atau petik satu
+    */
+
+   document.writeln("Saya Anak Informatika");
+   document.writeln("</br>");
+
+   // Menambah string -> Data string bisa digabung menggunakan operator + (plus)
+
+   document.writeln("Nama : " + "Doni")
+   document.writeln("</br>");
+   document.writeln("Prodi : " + "Informatika"); // secara default writeln ini ada enter dibelakangnya seperti di java yaitu println
+   document.writeln("</br>");
+
+
+   /*
+        ESCAPE SEQUENCE
+
+        - JS mendukung escape sequence di string. Escape sequence merupakan karakter khusus,
+        seperti ENTER, TAB, " (kutip dua), dan lain-lain.
+
+        \n -> untuk ENTER
+        \t -> untuk TAB
+        \' -> untuk petik satu
+        \" -> untuk petik dua
+        \\ -> untuk backslash (\)
+   */
+
+  document.writeln("<textarea cols='100' rows='10'>"); // menggunakan textarea agar keliatan enter pada string
+  document.writeln("Doni \nSaputra");
+  document.writeln("\\Home\\Doni");
+  document.write("\"Saya Anak Informatika\"\n");
+  document.writeln("\'JavaScript\'");
+  document.writeln("</textarea>")
+</script>
+
+</body>
+</html>
